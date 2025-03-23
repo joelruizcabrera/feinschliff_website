@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.literata {
+  font-family: "Literata", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  $sizes: 200, 300, 400, 500, 600, 700, 800, 900;
+  @each $size in $sizes {
+    &-#{$size} {
+      font-weight: $size !important;
+    }
+  }
+}
+
+.koulen {
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@layer base {
+  .font-outline-1 {
+    -webkit-text-stroke: 1px #fff;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px #fff;
+  }
+}
